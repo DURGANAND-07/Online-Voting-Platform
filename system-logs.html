@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Logs - iVOTE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+     <div class="admin-layout">
+        <aside class="sidebar">
+            <div>
+                <h1 class="logo">iVOTE</h1>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li><a href="admin-dashboard.html"><i class="fas fa-tachometer-alt fa-fw"></i> Dashboard</a></li>
+                        <li><a href="create-election.html"><i class="fas fa-plus-circle fa-fw"></i> Create Election</a></li>
+                        <li><a href="manage-candidates.html"><i class="fas fa-user-tie fa-fw"></i> Candidates</a></li>
+                        <li><a href="manage-voters.html"><i class="fas fa-users fa-fw"></i> Voters</a></li>
+                        <li><a href="live-results.html"><i class="fas fa-chart-bar fa-fw"></i> Live Results</a></li>
+                        <li><a href="system-logs.html" class="active"><i class="fas fa-clipboard-list fa-fw"></i> System Logs</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <a href="#" class="btn btn-secondary logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header"><h1>System Activity Logs</h1><button class="menu-toggle"><i class="fas fa-bars"></i></button></header>
+
+            <div class="card">
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead><tr><th>Timestamp</th><th>Admin ID</th><th>Action</th></tr></thead>
+                        <tbody>
+                            <tr><td>2025-10-05 14:30:15</td><td>admin@uavs.com</td><td>Logged In Successfully.</td></tr>
+                            <tr><td>2025-10-05 14:25:02</td><td>admin@uavs.com</td><td>Exported results for "Student Council 2025".</td></tr>
+                            <tr><td>2025-10-05 13:00:00</td><td>sys@uavs.com</td><td>Election "Student Council 2025" has ended.</td></tr>
+                            <tr><td>2025-10-05 09:00:00</td><td>sys@uavs.com</td><td>Election "Student Council 2025" has started.</td></tr>
+                            <tr><td>2025-10-04 11:15:45</td><td>admin@uavs.com</td><td>Uploaded voter CSV (450 voters).</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

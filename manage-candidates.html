@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Candidates - iVOTE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div>
+                <h1 class="logo">iVOTE</h1>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li><a href="admin-dashboard.html"><i class="fas fa-tachometer-alt fa-fw"></i> Dashboard</a></li>
+                        <li><a href="create-election.html"><i class="fas fa-plus-circle fa-fw"></i> Create Election</a></li>
+                        <li><a href="manage-candidates.html" class="active"><i class="fas fa-user-tie fa-fw"></i> Candidates</a></li>
+                        <li><a href="manage-voters.html"><i class="fas fa-users fa-fw"></i> Voters</a></li>
+                        <li><a href="live-results.html"><i class="fas fa-chart-bar fa-fw"></i> Live Results</a></li>
+                        <li><a href="system-logs.html"><i class="fas fa-clipboard-list fa-fw"></i> System Logs</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <a href="#" class="btn btn-secondary logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Manage Candidates</h1>
+                <button class="btn btn-primary" onclick="openModal('addCandidateModal')"><i class="fas fa-plus"></i> Add Candidate</button>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </header>
+
+            <div class="candidate-grid">
+                <div class="card candidate-card">
+                    <img src="Aman.jpg" alt="Aman kumar">
+                    <h3>Aman kumar</h3><p>Enhanced Student Events.<ul><li> I will organize more inclusive and diverse campus events, from cultural celebrations to social gatherings to make college life enjoyable.<li> Let's create a vibrant campus life that reflects the interests of every student. </li></li></ul></p>
+                    <div class="actions"><button class="btn btn-secondary">Edit</button><button class="btn btn-danger">Delete</button></div>
+                </div>
+                <div class="card candidate-card">
+                    <img src="Priya.webp" alt="Priya Patel">
+                    <h3>Priya Patel</h3><p>Academic Support.<ul><li>I will work to implement a student-run tutoring forum to help clarify course-related doubts and improve academic performance.<li>This will foster a more collaborative learning environment, helping every student succeed.</li></li></ul></p>
+                    <div class="actions"><button class="btn btn-secondary">Edit</button><button class="btn btn-danger">Delete</button></div>
+                </div>
+                <div class="card candidate-card">
+                    <img src="Hemant.jpg" alt="Hemant Kumar">
+                    <h3>Hemant Kumar</h3><p>Student Wellness.<ul><li>I pledge to prioritize student mental health by expanding access to on-campus counseling services and creating peer-support networks.<li>Your well-being is my top priority, and I will ensure we have the resources needed to thrive.</li></li></ul></p>
+                    <div class="actions"><button class="btn btn-secondary">Edit</button><button class="btn btn-danger">Delete</button></div>
+                </div>
+                 <!--<div class="card candidate-card">
+                    <img src="https://placehold.co/100x100/E2E8F0/4A5568?text=LN" alt="Ashutosh Dubey">
+                    <h3>Ashutosh Dubey</h3><p>Leadership that listens and delivers results.</p>
+                    <div class="actions"><button class="btn btn-secondary">Edit</button><button class="btn btn-danger">Delete</button></div>
+                </div> -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Add Candidate Modal -->
+    <div class="modal-overlay" id="addCandidateModal">
+        <div class="modal-content">
+            <div class="modal-header"><h2>Add New Candidate</h2><button class="modal-close">&times;</button></div>
+            <form onsubmit="event.preventDefault(); closeModal(); showToast('Candidate Added!', 'success');">
+                <div class="form-group"><label for="cName">Candidate Name</label><input type="text" id="cName" required></div>
+                <div class="form-group"><label for="cDesc">Manifesto</label><textarea id="cDesc" rows="3" required></textarea></div>
+                <button type="submit" class="btn btn-primary">Save Candidate</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

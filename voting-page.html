@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cast Your Vote - iVOTE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body style="background-color: var(--bg-white);">
+    <div class="container">
+        <header class="page-header" style="padding-top: 2rem;">
+            <h1>Cast Your Vote</h1>
+            <a href="#" class="btn btn-secondary logout-btn">Logout</a>
+        </header>
+        <p class="section-subtitle" style="text-align: left; margin: 0 0 2rem 0; max-width: none;">Select your preferred candidate below. You can only vote once.</p>
+
+        <div class="candidate-grid">
+            <div class="card candidate-card">
+                <img src="Aman.jpg" alt="Aman kumar">
+                <h3>Aman kumar</h3><p>Enhanced Student Events.<ul><li> I will organize more inclusive and diverse campus events, from cultural celebrations to social gatherings to make our daily college life more enjoyable.<li> Let's create a vibrant campus life that reflects the interests of every student.</li></li></ul></p>
+                <button class="btn btn-primary vote-btn" data-candidate="Aman kumar">Vote for Aman</button>
+            </div>
+            <div class="card candidate-card">
+                <img src="Priya.webp" alt="Priya Patel">
+                <h3>Priya Patel</h3><p>Academic Support.<ul><li>I will work to implement a student-run tutoring forum to help clarify course-related doubts and improve academic performanceand build confidence.<li>This will foster a more collaborative learning environment, helping every student succeed.</li></li></ul></p>
+                <button class="btn btn-primary vote-btn" data-candidate="Priya Patel">Vote for Priya</button>
+            </div>
+            <div class="card candidate-card">
+                <img src="Hemant.jpg" alt="Hemant Kumar">
+                <h3>Hemant kumar</h3><p>Student Wellness.<ul><li>I pledge to prioritize student mental health by expanding access to on-campus counseling services and creating peer-support networks.<li>Your well-being is my top priority, and I will ensure we have the resources needed to thrive.</li></li></ul></p>
+                <button class="btn btn-primary vote-btn" data-candidate="Hemant Kumar">Vote for Hemant</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal-overlay" id="confirmationModal">
+        <div class="modal-content" style="text-align: center;">
+            <div class="modal-header" style="justify-content: center;"><h2>Confirm Your Vote</h2></div>
+            <p style="margin: 1rem 0 2rem;">Are you sure you want to vote for <strong id="candidateNameSpan"></strong>? This action cannot be undone.</p>
+            <div style="display: flex; justify-content: center; gap: 1rem;">
+                <button class="btn btn-primary" id="confirmVoteBtn">Confirm Vote</button>
+                <button class="btn btn-secondary modal-close">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

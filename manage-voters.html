@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Voters - iVOTE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="admin-layout">
+         <aside class="sidebar">
+            <div>
+                <h1 class="logo">iVOTE</h1>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li><a href="admin-dashboard.html"><i class="fas fa-tachometer-alt fa-fw"></i> Dashboard</a></li>
+                        <li><a href="create-election.html"><i class="fas fa-plus-circle fa-fw"></i> Create Election</a></li>
+                        <li><a href="manage-candidates.html"><i class="fas fa-user-tie fa-fw"></i> Candidates</a></li>
+                        <li><a href="manage-voters.html" class="active"><i class="fas fa-users fa-fw"></i> Voters</a></li>
+                        <li><a href="live-results.html"><i class="fas fa-chart-bar fa-fw"></i> Live Results</a></li>
+                        <li><a href="system-logs.html"><i class="fas fa-clipboard-list fa-fw"></i> System Logs</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <a href="#" class="btn btn-secondary logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Manage Voters</h1>
+                <div>
+                    <button class="btn btn-secondary" onclick="showToast('Auto IDs Generated!')">Generate IDs</button>
+                    <button class="btn btn-primary" onclick="showToast('Credentials Sent!')">Send Credentials</button>
+                </div>
+                 <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </header>
+
+            <div class="card">
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead><tr><th>Voter ID</th><th>Name</th><th>Email</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td>VOT-1000</td><td>Aman kumar</td><td>john.amankr420@example.com</td><td><span class="status-badge status-voted">Voted</span></td></tr>
+                            <tr><td>VOT-1001</td><td>Hemant kumar</td><td>jane.hemant76@example.com</td><td><span class="status-badge status-not-voted">Not Voted</span></td></tr>
+                            <tr><td>VOT-1002</td><td>Priya patel</td><td>carlos.priya141@example.com</td><td><span class="status-badge status-voted">Voted</span></td></tr>
+                            <tr><td>VOT-1003</td><td>Aisha Khan</td><td>aisha.k@example.com</td><td><span class="status-badge status-not-voted">Not Voted</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

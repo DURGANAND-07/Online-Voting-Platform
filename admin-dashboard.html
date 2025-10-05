@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - iVOTE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div>
+                <h1 class="logo">iVOTE</h1>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li><a href="admin-dashboard.html" class="active"><i class="fas fa-tachometer-alt fa-fw"></i> Dashboard</a></li>
+                        <li><a href="create-election.html"><i class="fas fa-plus-circle fa-fw"></i> Create Election</a></li>
+                        <li><a href="manage-candidates.html"><i class="fas fa-user-tie fa-fw"></i> Candidates</a></li>
+                        <li><a href="manage-voters.html"><i class="fas fa-users fa-fw"></i> Voters</a></li>
+                        <li><a href="live-results.html"><i class="fas fa-chart-bar fa-fw"></i> Live Results</a></li>
+                        <li><a href="system-logs.html"><i class="fas fa-clipboard-list fa-fw"></i> System Logs</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <a href="#" class="btn btn-secondary logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Dashboard Overview</h1>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </header>
+            
+            <div class="stats-grid">
+                <div class="card stat-card"><i class="fas fa-poll icon"></i><div><h3>Total Elections</h3><p>05</p></div></div>
+                <div class="card stat-card"><i class="fas fa-hourglass-half icon"></i><div><h3>Active Elections</h3><p>01</p></div></div>
+                <div class="card stat-card"><i class="fas fa-users icon"></i><div><h3>Total Voters</h3><p>120</p></div></div>
+                <div class="card stat-card"><i class="fas fa-vote-yea icon"></i><div><h3>Votes Today</h3><p>54</p></div></div>
+            </div>
+
+            <div class="page-header" style="margin-top: 3rem;">
+                <h2>Quick Actions</h2>
+            </div>
+            <a href="create-election.html" class="btn btn-primary"><i class="fas fa-plus"></i> Create New Election</a>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
